@@ -1,0 +1,96 @@
+/* Centralized theme tokens for TourLandHolidays */
+
+:root {
+  /* Brand colors */
+  --color-primary: #0f9bd7; /* ocean blue */
+  --color-secondary: #ff7b54; /* sunset coral */
+  --color-accent: #7b61ff; /* violet accent */
+
+  /* Surfaces & text */
+  --color-background: #f4f7fb;
+  --color-surface: #ffffff;
+  --color-elevated: #f9fbff;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* Semantic */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Radii */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 18px 45px rgba(15, 23, 42, 0.06);
+
+  /* Layout */
+  --navbar-height: 4.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #020617;
+    --color-surface: #020617;
+    --color-elevated: #020617;
+    --color-text: #e5e7eb;
+    --color-muted: #9ca3af;
+    --color-border: #1f2937;
+  }
+}
+
+.glass-surface {
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: radial-gradient(
+      circle at top left,
+      rgba(148, 163, 184, 0.28),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.82),
+      rgba(15, 23, 42, 0.94)
+    );
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(24px);
+}
+
+.gradient-sky {
+  background-image: radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(244, 114, 182, 0.3),
+      transparent 55%
+    );
+}
+
+.gradient-primary {
+  background-image: linear-gradient(
+    135deg,
+    #0f9bd7,
+    #2563eb,
+    #7b61ff
+  );
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
