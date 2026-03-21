@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { travelApi } from "@/services/travelApi";
 import { Button } from "@/components/ui/Button";
 import { CalendarDays, MapPin, User, CheckCircle2, XCircle } from "lucide-react";
@@ -70,9 +71,15 @@ export default async function TourDetailPage(props: TourDetailPageProps) {
 
         <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-card">
           <div className="relative mb-3 h-40 overflow-hidden rounded-2xl">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${tour.imageUrl})` }}
+            <Image
+              src={tour.imageUrl}
+              alt={tour.title}
+              fill
+              priority
+              placeholder="blur"
+              blurDataURL={tour.blurDataUrl}
+              className="object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-slate-900/0" />
           </div>

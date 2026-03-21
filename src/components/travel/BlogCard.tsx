@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import type { Blog } from "@/types/blog";
 
@@ -10,9 +11,14 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <article className="group flex transform flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative h-48 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${blog.imageUrl})` }}
+        <Image
+          src={blog.imageUrl}
+          alt={blog.title}
+          fill
+          placeholder="blur"
+          blurDataURL={blog.blurDataUrl}
+          className="object-cover"
+          sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-slate-900/0" />
         <div className="relative flex h-full flex-col justify-between p-4">

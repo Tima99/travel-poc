@@ -5,6 +5,7 @@ export interface Destination {
   region: string;
   description: string;
   imageUrl: string;
+  blurDataUrl: string;
   startingPrice: number;
   bestSeason: string;
 }

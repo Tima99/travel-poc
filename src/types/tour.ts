@@ -15,5 +15,6 @@ export interface Tour {
   inclusions: string[];
   exclusions: string[];
   imageUrl: string;
+  blurDataUrl: string;
 }
 

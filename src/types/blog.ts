@@ -6,6 +6,7 @@ export interface Blog {
   excerpt: string;
   content: string[];
   imageUrl: string;
+  blurDataUrl: string;
   readingTime: number;
   publishedAt: string;
 }

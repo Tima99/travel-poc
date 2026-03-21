@@ -1,4 +1,5 @@
 import type { Blog } from "@/types/blog";
+import { getBlurDataUrl } from "@/data/imageBlurPlaceholders";
 
 export const blogs: Blog[] = [
   {
@@ -15,6 +16,9 @@ export const blogs: Blog[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    )!,
     readingTime: 6,
     publishedAt: "2025-01-10",
   },
@@ -32,6 +36,9 @@ export const blogs: Blog[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    )!,
     readingTime: 7,
     publishedAt: "2025-02-18",
   },
@@ -49,6 +56,9 @@ export const blogs: Blog[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg",
+    )!,
     readingTime: 5,
     publishedAt: "2025-03-05",
   },

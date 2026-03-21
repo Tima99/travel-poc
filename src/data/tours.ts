@@ -1,4 +1,5 @@
 import type { Tour } from "@/types/tour";
+import { getBlurDataUrl } from "@/data/imageBlurPlaceholders";
 
 export const tours: Tour[] = [
   {
@@ -40,6 +41,9 @@ export const tours: Tour[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    )!,
   },
   {
     id: "bali-signature",
@@ -80,6 +84,9 @@ export const tours: Tour[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    )!,
   },
   {
     id: "swiss-europe",
@@ -117,6 +124,9 @@ export const tours: Tour[] = [
     ],
     imageUrl:
       "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
+    )!,
   },
 ];
 

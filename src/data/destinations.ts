@@ -1,4 +1,5 @@
 import type { Destination } from "@/types/destination";
+import { getBlurDataUrl } from "@/data/imageBlurPlaceholders";
 
 export const destinations: Destination[] = [
   {
@@ -10,6 +11,9 @@ export const destinations: Destination[] = [
       "Wake up to turquoise lagoons, private overwater villas, and candle-lit dinners on the sandbanks.",
     imageUrl:
       "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    )!,
     startingPrice: 78000,
     bestSeason: "Oct – Mar",
   },
@@ -22,6 +26,9 @@ export const destinations: Destination[] = [
       "Rice terraces, beach clubs, jungle swings, and cliffside temples crafted into a rejuvenating escape.",
     imageUrl:
       "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg",
+    )!,
     startingPrice: 54000,
     bestSeason: "Apr – Sep",
   },
@@ -34,6 +41,9 @@ export const destinations: Destination[] = [
       "Sunsets by the Seine, Swiss mountain trains, and charming alpine villages in a single itinerary.",
     imageUrl:
       "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
+    )!,
     startingPrice: 145000,
     bestSeason: "Apr – Jun",
   },
@@ -46,6 +56,9 @@ export const destinations: Destination[] = [
       "Palace stays, desert safaris, and regal forts across Jaipur, Jodhpur, and Udaipur.",
     imageUrl:
       "https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg",
+    blurDataUrl: getBlurDataUrl(
+      "https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg",
+    )!,
     startingPrice: 32000,
     bestSeason: "Oct – Feb",
   },

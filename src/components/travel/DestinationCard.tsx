@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import Image from "next/image";
 import type { Destination } from "@/types/destination";
 
 export interface DestinationCardProps {
@@ -12,9 +13,14 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
     <article className="group flex transform flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative h-52 overflow-hidden">
         <div className="absolute inset-0 gradient-sky opacity-70 transition-opacity duration-200 group-hover:opacity-90" />
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${destination.imageUrl})` }}
+        <Image
+          src={destination.imageUrl}
+          alt={destination.name}
+          fill
+          placeholder="blur"
+          blurDataURL={destination.blurDataUrl}
+          className="object-cover"
+          sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/30 to-slate-900/0" />
         <div className="relative flex h-full flex-col justify-between p-4">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { travelApi } from "@/services/travelApi";
 import { CalendarDays } from "lucide-react";
 
@@ -63,9 +64,15 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
       </header>
 
       <div className="relative h-56 overflow-hidden rounded-3xl">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${blog.imageUrl})` }}
+        <Image
+          src={blog.imageUrl}
+          alt={blog.title}
+          fill
+          priority
+          placeholder="blur"
+          blurDataURL={blog.blurDataUrl}
+          className="object-cover"
+          sizes="(min-width: 1024px) 896px, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-slate-900/0" />
       </div>

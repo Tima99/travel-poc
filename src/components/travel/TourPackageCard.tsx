@@ -1,6 +1,7 @@
 import { CalendarDays, Map, User } from "lucide-react";
 import type { Tour } from "@/types/tour";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface TourPackageCardProps {
   tour: Tour;
@@ -10,9 +11,14 @@ export const TourPackageCard: React.FC<TourPackageCardProps> = ({ tour }) => {
   return (
     <article className="group flex transform flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative h-56 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${tour.imageUrl})` }}
+        <Image
+          src={tour.imageUrl}
+          alt={tour.title}
+          fill
+          placeholder="blur"
+          blurDataURL={tour.blurDataUrl}
+          className="object-cover"
+          sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-slate-900/0" />
         <div className="relative flex h-full flex-col justify-between p-4">
